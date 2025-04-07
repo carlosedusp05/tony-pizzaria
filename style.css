@@ -12,14 +12,32 @@ ul, ol, li{
 }
 
 body{
-    padding: 0 80px;
+    padding: 60px 80px;
+    font-family: "Poppins", sans-serif;
 }
 
 header{
     background-color: lightgreen;
     position: fixed;
+    top: 60px;
     height: 60px;
     width: calc(100% - 160px);
+    display: flex;
+    justify-content: space-between;
+}
+
+header menu{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+header li{
+    padding: 4px 8px;
+    transition: .5s
+}
+header li:hover{
+    background-color: #FBDDC1;
+    box-shadow: 0 4px 4px #0008;
 }
 main{
     background-color: plum;
