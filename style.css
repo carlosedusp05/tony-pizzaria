@@ -10,3 +10,22 @@ a{
 ul, ol, li{
     list-style: none;
 }
+
+body{
+}
+
+header{
+    background-color: lightgreen;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+}
+main{
+    background-color: plum;
+    height: 700px; 
+}
+
+footer{
+    height: 525px;
+    background-color: tomato;
+}
