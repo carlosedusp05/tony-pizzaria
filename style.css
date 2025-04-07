@@ -12,13 +12,14 @@ ul, ol, li{
 }
 
 body{
+    padding: 0 80px;
 }
 
 header{
     background-color: lightgreen;
-    position: absolute;
+    position: fixed;
     height: 60px;
-    width: 100%;
+    width: calc(100% - 160px);
 }
 main{
     background-color: plum;
