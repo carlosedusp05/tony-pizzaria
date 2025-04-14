@@ -1,5 +1,5 @@
 *{
-padding: 0%;
+padding: 0;
 margin: 0;
 box-sizing: border-box;
 }
@@ -16,21 +16,23 @@ ul, ol, li{
     --primary-color: #f07807;
     --secundary-color: #FBDDC1;
     --default-shadow: 0 4px 6px #0004;
+    --default-padding: 0 80px;
 }
 
 body{
-    padding: 0 80px;
     font-family: "Poppins", sans-serif;
+    background-color: var(--secundary-color);
 }
 
 header{
     position: fixed;
     top: 60px;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--default-padding);
 }
 
 header menu{
@@ -55,9 +57,115 @@ header button{
     border-radius: 12px;
     box-shadow: var(--default-shadow);
 }
-main{
-    background-color: plum;
-    height: 700px; 
+section{
+    height: 100vh;
+}
+.home{
+    background-image: url(./img/triangulos.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding: var(--default-padding);
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+.hero h2 {
+    width: 558px;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+.hero span {
+    color: var(--primary-color);
+}
+.container-pizza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pizza {
+    display: flex;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    position: relative;
+}
+.adicionar{
+    position: absolute;
+    right: -18px;
+    top: -18px;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-color);
+    border: 4px solid white;
+    border-radius: 13px;
+    font-size: 32px;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.pizza:hover .adicionar {
+    opacity: 1;
+}
+
+.animacao {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 12px; 
+}
+
+.container-info {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    bottom: -36px;
+    width: 100%;
+    height: 36px;
+    background-color: #0008;
+    border-radius: 0 0 14px 14px;
+    transition: .5s;
+}
+
+.pizza:hover .container-info {
+    bottom: 0;
+}
+
+.container-info p {
+    width: 120px;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+.container-info span {
+    display: grid;
+    place-content: center;
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    box-sizing: 4px;
+    color: white;
+}
+.cardápio{
+    background-color: palegreen;
+}
+.serviços{
+    background-color: aquamarine;
 }
 
 footer{
