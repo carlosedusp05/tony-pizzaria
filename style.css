@@ -454,5 +454,95 @@ footer{
 
 /*MOBILE*/
 @media (max-width:768px){
+    .logoHeader,
+    .pizzaHome{
+        display: none;
+    }
+    
+    header{
+        background-image: url(./img/logo-branca.png);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home{
+        background-image: url(./img/pizzafundo.png);
+        background-size: 160vh;
+        background-position: center;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .hero h2{
+        font-size: 32px;
+    }
+
+    header menu{
+        height: 64px;
+        position: fixed;
+        width: 100vw;
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        color: white;
+        gap: 0;
+    }
+
+    .cardápio{
+        width: 100%;
+    }
+
+    .cardapio-item.bebidas :nth-child(2){
+        display: none;
+    }
+
+
+    .serviços{
+        background-color: var(--secundary-color);
+        width: 100%;
+        align-items: center;
+    }
+
+    .serviços p{
+        display: none;
+    }
+    
+    .servico-card{
+        width: 350px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .servico-card h4{
+        font-size: 43px;
+    }
+
+    .contatos-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contato-item{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .social menu{
+        flex-direction: row;
+    }
+
+    .social li{
+        width: 50px;
+        padding-bottom: 25px;
+    }
+
+    footer{
+        padding-top: 50px;
+    }
+
+    .copyright{
+       text-align: center;
+    }
 
 }
