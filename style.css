@@ -476,6 +476,7 @@ footer{
 
     .hero h2{
         font-size: 32px;
+        align-items: center;
     }
 
     header menu{
@@ -489,8 +490,14 @@ footer{
         gap: 0;
     }
 
+    .login{
+        color: #f07807;
+    }
+
     .cardápio{
         width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .cardapio-item.bebidas :nth-child(2){
