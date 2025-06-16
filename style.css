@@ -62,6 +62,11 @@ header button{
     border-radius: 12px;
     box-shadow: var(--default-shadow);
 }
+
+.logobranca{
+    display: none;
+}
+
 section{
     height: 100vh;
     padding: var(--default-padding);
@@ -454,85 +459,127 @@ footer{
 
 /*MOBILE*/
 @media (max-width:768px){
-    .logoHeader,
-    .pizzaHome{
-        display: none;
+    header{
+        padding: 12px;
     }
     
-    header{
-        background-image: url(./img/logo-branca.png);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .home{
-        background-image: url(./img/pizzafundo.png);
-        background-size: 160vh;
-        background-position: center;
-        align-items: center;
-        justify-content: end;
-    }
-
-    .hero h2{
-        font-size: 32px;
-        align-items: center;
-    }
 
     header menu{
         height: 64px;
-        position: fixed;
         width: 100vw;
+        position: fixed;
         left: 0;
         bottom: 0;
-        background-color: var(--primary-color);
         color: white;
-        gap: 0;
+        background-color: var(--primary-color);
+        gap: 13px;
     }
 
-    .login{
-        color: #f07807;
+    .logoHeader{
+        display: none;
     }
 
-    .cardápio{
-        width: 100%;
-        align-items: center;
+    .logobranca{
+        display: block;
+    }
+
+    .titulo-secao{
         justify-content: center;
     }
 
-    .cardapio-item.bebidas :nth-child(2){
-        display: none;
+    .home{
+        padding: 0px;
+        height: 600px;
+        place-items: left;
+        background-image: url(./img/pizzafundo.png);
+        background-size: 160vh;
+        background-position: center;
     }
 
-
-    .serviços{
-        background-color: var(--secundary-color);
+    .filtro{
+        background-color: #F07807;
         width: 100%;
-        align-items: center;
+        height: 600px;
+        opacity: 0.7;
+        position: absolute;
     }
 
-    .serviços p{
-        display: none;
-    }
-    
-    .servico-card{
-        width: 350px;
-        flex-wrap: wrap;
+    .hero{
+        grid-template-rows: none;
+        place-content: end;
         padding: 0;
     }
 
-    .servico-card h4{
-        font-size: 43px;
+    .hero img{
+        display: none;
+    }
+
+    .hero h2{
+        width: 287px;
+        position: absolute;
+        font-size: 40px;
+        color: white;
+        margin-right: 75px;
+    }
+
+    .hero span{
+        background-color: white;
     }
 
     .contatos-container{
         display: flex;
         flex-direction: row;
+        padding-top: 56px;
     }
 
     .contato-item{
         justify-content: center;
         flex-direction: column;
+    }
+
+    .contato-item h4{
+        text-align: center;
+    }
+
+    .cabecalho-item{
+        text-align: center;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .cabecalho-item a{
+        display: none;
+    }
+
+    .produto:nth-child(2){
+        display: none;
+    }
+    
+    .produto span{
+        padding-left: 20%;        
+    }
+
+    .cardapio{
+        padding: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .cardapio-item.bebidas .produto:nth-child(n+2){
+        display: none;
+    }
+
+    .servicos{
+        padding: 20px;
+    }
+
+    .servico-card{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .servico-card p{
+        display: none;
     }
 
     .social menu{
@@ -541,15 +588,15 @@ footer{
 
     .social li{
         width: 50px;
-        padding-bottom: 25px;
     }
 
     footer{
-        padding-top: 50px;
+        height: 600px;
     }
 
     .copyright{
-       text-align: center;
+        text-align: center;
     }
+
 
 }
